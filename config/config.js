@@ -25,7 +25,7 @@ module.exports = {
 
 	mongoose: {
 
-		URI: 'mongodb://localhost/allies'
+		URI: 'mongodb://localhost/allies:12345'
 
 	},
 
