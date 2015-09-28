@@ -8,7 +8,7 @@ module.exports = {
 
 	expressBase: {
 
-		port: process.env.PORT || 9001,
+		port: process.env.PORT || 4565,
 
 		dynamicRouter: {
 			useAutorizations: true,
