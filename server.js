@@ -27,5 +27,14 @@ expressBase.init(config.expressBase, function(app) {
 
 	app.use('/api/v1/images', express.static('./app/images'));
 
+	if (process.send) process.send('online');
+
+	process.on('message', function(message) {
+		if (message === 'shutdown') {
+			performCleanup();
+			process.exit(0);
+		}
+	});
+
 	console.log(chalk.green.bgBlue.bold(config.appTitle + ' serveur écoute maintenant sur le port ' + config.expressBase.port));
 });
