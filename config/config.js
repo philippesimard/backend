@@ -8,7 +8,7 @@ module.exports = {
 
 	expressBase: {
 
-		port: process.env.PORT || 4565,
+		port: process.env.PORT || 9001,
 
 		dynamicRouter: {
 			useAutorizations: true,
@@ -25,7 +25,7 @@ module.exports = {
 
 	mongoose: {
 
-		URI: 'mongodb://localhost/allies:12345'
+		URI: process.env.mongoURI || 'mongodb://localhost/allies'
 
 	},
 
