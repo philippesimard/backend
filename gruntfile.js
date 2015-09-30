@@ -11,12 +11,12 @@ module.exports = function(grunt) {
       },
       dev: {
         options: {
-          script: 'index.js'
+          script: 'server.js'
         }
       },
       prod: {
         options: {
-          script: 'index.js',
+          script: 'server.js',
           'node_env': 'production'
         }
       }
@@ -25,7 +25,7 @@ module.exports = function(grunt) {
     watch: {
       express: {
         files: [
-          'index.js',
+          'server.js',
           'src/{,*//*}*.{js,json}'
         ],
         tasks: ['express:dev'],
