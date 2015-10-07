@@ -6,15 +6,13 @@ var mongoose = require('mongoose'),
 	Schema = mongoose.Schema,
 	_ = require('lodash-node');
 
-var FilmSchema = ExpressBase.getBaseSchema().extend({
+var MediaSchema = ExpressBase.getBaseSchema().extend({
 	name: {
 		type: String
 	},
-	synopsis: {
-		type: String
-	},
-	realisateur: {
-		type: String
+	sectionId: {
+		type: mongoose.Schema.ObjectId,
+		ref: 'media-section'
 	},
 	niveau: {
 		type: mongoose.Schema.ObjectId,
@@ -23,15 +21,13 @@ var FilmSchema = ExpressBase.getBaseSchema().extend({
 	annee: {
 		type: Number
 	},
-	dureeMins: {
-		type: Number
-	},
 	img: {
 		type: String
-	}
+	},
+	infos: {}
 });
 
-FilmSchema.statics.can = function(operation, user) {
+MediaSchema.statics.can = function(operation, user) {
 	if (_.contains(['READ'], operation)) {
 		return true
 	} else {
@@ -39,4 +35,4 @@ FilmSchema.statics.can = function(operation, user) {
 	}
 }
 
-module.exports = mongoose.model('film', FilmSchema);
+module.exports = mongoose.model('media', MediaSchema);
