@@ -25,7 +25,8 @@ var UserSchema = UserAuth.getSecureUserSchema().extend({
 		type: String,
 		trim: true,
 		required: true
-	}
+	},
+	favorites: {}
 });
 
 UserAuth.getSecureUserSchema().pre('save', function(next) {
