@@ -32,10 +32,10 @@ var ParcourSchema = ExpressBase.getBaseSchema().extend({
 	ressourcesDispo: {
 		type: String
 	},
-	hasSectors: {
-		type: Boolean,
-		default: true
-	}
+	medias: [{
+		type: mongoose.Schema.ObjectId,
+		ref: 'media'
+	}]
 });
 
 ParcourSchema.statics.can = function(operation, user) {
