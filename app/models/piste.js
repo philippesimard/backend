@@ -24,7 +24,15 @@ var PisteSchema = ExpressBase.getBaseSchema().extend({
 	},
 	description: {
 		type: String
-	}
+	},
+	templateUrl: {
+		type: String
+	},
+	badge: {
+		type: Schema.ObjectId,
+    ref: 'badge'
+	},
+	data: {}
 });
 
 PisteSchema.statics.can = function(operation, user) {
