@@ -26,6 +26,10 @@ var UserSchema = UserAuth.getSecureUserSchema().extend({
 		trim: true,
 		required: true
 	},
+	badges: [{
+		type: Schema.ObjectId,
+    ref: 'badge'
+	}],
 	favorites: {}
 });
 
