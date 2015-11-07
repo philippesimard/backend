@@ -33,7 +33,11 @@ var UserSchema = UserAuth.getSecureUserSchema().extend({
 	favorites: {}
 });
 
-UserAuth.getSecureUserSchema().pre('save', function(next) {
+UserSchema.pre('save', function(next) {
+
+	if (this.isNew) {
+		this.roles = ['user'];
+	}	
 
 	if (this.isModified('email')) {
 		this.username = this.email;
