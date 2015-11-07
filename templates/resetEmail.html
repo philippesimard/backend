@@ -1,0 +1,35 @@
+<!-- TEMPLATE POUR LA CONFIRMATION  -->
+<!DOCTYPE html>
+<html>
+<head>
+<!-- CSS Minimifié -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/css/materialize.min.css">
+
+<!-- Pour les icons -->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+
+<div style="padding-top: 40px;
+  				  padding-bottom: 40px;
+  					color: inherit;
+  					background-size:cover; 
+  					background-image: url('http://acommealliees.ca/cdn/mail/reset.jpg');">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <br><br>
+        <h2 class="header center  orange-text">Réinitialisation du mot de passe</h2>
+        <div class="row center">
+         <h5 class="header col s12 light white-text">Quelqu'un a demandé à réinitialiser votre mot de passe. Vous pouvez le faire en suivant ce lien.</h5>
+         <h5 class="header col s12 light white-text">Si vous n'êtes pas à l'origine de cette demande, merci d'ignorer cet email.</h5>
+        
+        </div>
+        <div class="row center">
+          <a href="{{ resetToken }}"  class="flat btn-large orange z-depth-0">Réinitialiser mon mot de passe</a>
+        </div>
+        <br><br>
+
+      </div>
+    </div>
+  </div>
+ </body>

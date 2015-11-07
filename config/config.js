@@ -35,14 +35,16 @@ module.exports = {
 			mailOptions: {
 				from: 'Gris Québec ✔ <nepasrepondre@grisquebec.org>',
 				subject: 'Réinitialisation de votre mot de passe'
-			}
+			},
+			template: 'templates/resetEmail.html'
 		},
 
 		confirmEmail: {
 			mailOptions: {
 				from: 'Gris Québec ✔ <nepasrepondre@grisquebec.org>',
 				subject: 'Confirmation de votre courriel'
-			}
+			},
+			template: 'templates/confirmationEmail.html'
 		},
 
 		signup: {
