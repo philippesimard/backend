@@ -35,14 +35,16 @@ module.exports = {
 			mailOptions: {
 				from: 'Gris Québec ✔ <nepasrepondre@grisquebec.org>',
 				subject: 'Réinitialisation de votre mot de passe'
-			}
+			},
+			template: 'templates/resetEmail.html'
 		},
 
 		confirmEmail: {
 			mailOptions: {
 				from: 'Gris Québec ✔ <nepasrepondre@grisquebec.org>',
 				subject: 'Confirmation de votre courriel'
-			}
+			},
+			template: 'templates/confirmationEmail.html'
 		},
 
 		signup: {
@@ -66,7 +68,7 @@ module.exports = {
 			secret: '7279BEE6EBCC80400E2CED8D12D0591D34EA5C5F3B3D557A1773F1680F217780',
 		},
 		apiRoot: 'api/v1',
-		unprotectedRoutes: ['api/v1/images/film/*']
+		unprotectedRoutes: ['api/v1/parcours/*','api/v1/media/*', 'api/v1/media-section/*', 'api/v1/niveau/*', 'api/v1/piste/*', 'api/v1/secteur/*']
 	},
 
 	mailer: {
