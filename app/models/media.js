@@ -14,10 +14,10 @@ var MediaSchema = ExpressBase.getBaseSchema().extend({
 		type: mongoose.Schema.ObjectId,
 		ref: 'media-section'
 	},
-	niveau: {
+	niveau: [{
 		type: mongoose.Schema.ObjectId,
 		ref: 'niveau'
-	},
+	}],
 	annee: {
 		type: Number
 	},
