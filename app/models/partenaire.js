@@ -10,9 +10,6 @@ var PartenaireSchema = ExpressBase.getBaseSchema().extend({
 	name: {
 		type: String
 	},
-	type: {
-		type: String,
-	},
 	position: {
 		type: Number,
 	},
