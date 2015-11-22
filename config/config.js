@@ -76,7 +76,8 @@ module.exports = {
 			'api/v1/piste/*',
 			'api/v1/secteur/*',
 			'api/v1/activite/*',
-			'api/v1/partenaire/*'
+			'api/v1/partenaire/*',
+			'api/v1/mailer'
 		]
 	},
 
