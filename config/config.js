@@ -48,7 +48,7 @@ module.exports = {
 		},
 
 		signup: {
-			sendConfirmationEmail: true,
+		//	sendConfirmationEmail: true,
 		},
 
 		userApi: {
@@ -82,8 +82,16 @@ module.exports = {
 	},
 
 	mailer: {
-		host: '127.0.0.1',
-		port: 1025,
-		ignoreTLS: true
+		host: 'acommealliees.ca',
+		port: 465,
+		secure: true,
+		 auth: {
+        user: 'acommealliees',
+        pass: 'admingris39150043'
+    },
+    tls: {
+        rejectUnauthorized: false
+    }
+		//ignoreTLS: true
 	}
 };
