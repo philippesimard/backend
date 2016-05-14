@@ -7,13 +7,14 @@ var config = require('./config/config'),
 	userAuth = require('express-user-auth'),
 	mongoose = require('mongoose'),
 	path = require('path'),
-	nodemailer = require('nodemailer');
+	nodemailer = require('nodemailer'),
+	smtpTransport = require('nodemailer-smtp-transport');
 
 expressBase.init(config.expressBase, function(app) {
 
 	mongoose.connect(config.mongoose.URI);
 
-	var mailer = nodemailer.createTransport(config.mailer);
+	var mailer = nodemailer.createTransport(smtpTransport(config.mailer));
 
 	userAuth.init(app, require('./app/models/user'), config.expressUserAuth, mailer);
 

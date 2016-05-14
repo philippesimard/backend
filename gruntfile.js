@@ -67,5 +67,5 @@ module.exports = function(grunt) {
     },
   });
 
-  grunt.registerTask('dev', ['shell:mongo', 'express:dev', 'maildev', 'watch']);
+  grunt.registerTask('dev', ['shell:mongo', 'express:dev', 'watch']);
 };
